@@ -4,7 +4,7 @@ before_install:
 
 script:
 - mkdir build
-- xelatex -output-directory build main.tex
+- xelatex -output-directory build jonstites_resume.tex
 
 deploy:
   provider: s3

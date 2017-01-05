@@ -5,6 +5,7 @@ before_install:
 script:
 - mkdir build
 - xelatex -output-directory build jonstites_resume.tex
+- find build ! -name 'jonstites_resume.pdf' -type f -exec rm -f {} +
 
 deploy:
   provider: s3

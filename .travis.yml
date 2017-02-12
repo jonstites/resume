@@ -1,0 +1,19 @@
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install texlive-latex-recommended texlive-xetex tex-gyre texlive-latex-extra
+
+script:
+- mkdir build
+- xelatex -output-directory build jonstites_resume.tex
+- find build ! -name 'jonstites_resume.pdf' -type f -exec rm -f {} +
+
+deploy:
+  provider: s3
+  bucket: www.jonstites.com
+  skip_cleanup: true
+  local_dir: _site
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: us-west-1
+  upload-dir: resume
+  local_dir: build

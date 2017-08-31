@@ -1,30 +1,30 @@
 \documentclass[12pt]{article}
-\usepackage[pdfpagelabels=false]{hyperref}
-\usepackage{fontspec}
-\usepackage[letterpaper, margin=1.5cm]{geometry}
-\usepackage{xcolor}
+
+\usepackage{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{textcomp}
 \usepackage{tgpagella}
 
+\pagenumbering{gobble}
+\usepackage{titlesec}                                   %custom \section                                                                                                   
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+% hyperlink settings
+\usepackage{hyperref}
+\usepackage{xcolor}
 \hypersetup{%
   colorlinks=false,% hyperlinks will be black
   urlcolor=blue,% hyperlink borders will be red
   pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
 }
 
-\pagenumbering{gobble}
-
-\newcommand\sectionline{\par\leavevmode\leaders\hrule height 2ex depth \dimexpr0.4pt-2ex\hfill\kern0pt\par}
-
-\title{My Resume}
-\author{Jonathan Stites}
-\date{December 2016}
+\overfullrule=2cm
 
 \begin{document}
 
 \begin{center}
-{\LARGE Jonathan Stites}
+{\Huge Jonathan Stites}
 
 {\href{mailto:mail+resume@jonstites.com}{mail@jonstites.com}}
 $\bullet$
@@ -35,53 +35,47 @@ $\bullet$
 {\href{https://jonstites.com}{https://jonstites.com}}
 \end{center}
 
-{\Large Education}\sectionline
+\section{Education}
+\begin{tabular}{rl}
+May 2018  & Masters of Science in Computer Science \\
+          & University of Texas at Austin \\
+          & Selected courses: \\
+          & GPA: \\
+June 2013 & Bachelor of Science \\
+		  &  University of California Santa Cruz	\\
+		  &  Majors: MCD Biology, Cognitive Science \\
+		  &  Minor: Bioinformatics \\
+		  &  GPA: 3.90 \\
+\end{tabular}
 
-\textbf{Masters of Science in Computer Science}, University of Texas at Austin (Graduating May 2018)
-\begin{itemize}    
-\setlength{\itemindent}{2em}
-    \item[] Selected courses: Operating Systems, Cryptography, Natural Language Processing
+\section{Projects}
+\begin{tabular}{rl}
+For fun & subreddit comment classification \\
+		& elo ranking \\
+For class & Movie text regression \\
+\end{tabular}
+
+\section{Tools}
+\begin{tabular}{rl}
+Primary  & Python, bash/zsh, git \\
+Secondary & R, C, C++, Go, Java \\
+\end{tabular}
+
+\section{Experience}
+\begin{tabular}{rl}
+2013-2016 & Dovetail Genomics, Santa Cruz, CA \\
+& Bioinformatics Scientist \\
+\end{tabular}
+
+\begin{itemize}	
+\item Collaborated with small team to build a custom, \\
+\item highly accurate genome scaffoldler \\
+\item Designed and implemented data analysis for \\
+\item high-throughput \\
+\item sequencing data \\
+\item Improved ability to scale using custom \\
+\item Amazon EC2 and \\
+\item S3 pipelines \\
 \end{itemize}
-
-\vspace{\baselineskip}
-
-\textbf{Bachelor of Science}, University of California Santa Cruz (September 2009 - June 2013)
-
-\begin{itemize}
-\setlength{\itemindent}{2em}
-\item[] Major: Molecular, Cell \& Developmental Biology
-\item[] Major: Cognitive Science
-\item[] Minor: Bioinformatics
-\item[] GPA: 3.90
-\end{itemize}
-
-{\Large Tools}\sectionline
-
-    \qquad \quad Primary (daily use): Python, bash/zsh, git \\
-
-    \qquad \quad Familiar with: C, C++, Go \\
-
-{\Large Experience}\sectionline
-
-\textbf{Bioinformatics Scientist}, Dovetail Genomics, Santa Cruz, CA (August 2013 - June 2016)
-
-\begin{itemize}
-\setlength{\itemindent}{2em}
-\item[] Collaborated with small team to build a custom, highly accurate genome scaffoldler
-\item[] Designed and implemented data analysis programs for high-throughput sequencing data
-\item[] Improved ability to scale using custom Amazon EC2 and S3 pipelines
-\item[] Created an Elo ranking system for foosball using Python
-\end{itemize}
-
-{\Large Professional Development}\sectionline
-\qquad \quad \textbf{Applied Discrete Mathematics}, University of California Santa Cruz \\
-
-\qquad \quad \textbf{Introduction to Data Structures}, University of California Santa Cruz \\
-
-\qquad \quad \textbf{Linear Algebra - Foundations to Frontiers}, edX \\
-
-\qquad \quad \textbf{Machine Learning}, Stanford University through Coursera  \\
-
-\qquad \quad \textbf{Algorithms: Design and Analysis} Part I, Stanford University through Coursera \\
 
 \end{document}

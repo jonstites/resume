@@ -25,6 +25,8 @@
 % show where hbox is overfull
 \overfullrule=2cm
 
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
 \newcommand*{\email}{
 	\href{mailto:mail+resume@jonstites.com}{mail@jonstites.com}
 	}
@@ -40,56 +42,101 @@
 \newcommand*{\website}{
 	{\href{https://jonstites.com}{https://jonstites.com}}
 }
+
+\newcommand*{\xenopus}{
+	Session, Adam M., Yoshinobu Uno, Taejoon Kwon, et al. 
+	“Genome Evolution in the Allotetraploid Frog Xenopus Laevis.” 
+	Nature 538, no. 7625 (October 20, 2016): 336–43.
+	}
+	
+\newcommand*{\hirise}{
+	Putnam, Nicholas, O’Connell Brendan, Jonathan Stites, et al. 
+	“Chromosome-Scale Shotgun Assembly Using an in Vitro Method 
+	for Long-Range Linkage.” Genome Research 2016. 26: 342-350
+	}
+
+\newcommand*{\Contact}{
+	\begin{center}
+		\Huge Jonathan Stites \\
+		\small \email| \phone | \website \\
+	    \github
+	\end{center}
+}
+
+\newcommand*{\Education}{
+	\section{Education}
+	\begin{tabular}{rl}
+		May 2018  & \textbf{Master of Science}, \textit{University of Texas at Austin} \\
+				  & Computer Science \\
+          		  & GPA: 3.58 \\
+		2013 	  & \textbf{Bachelor of Science}, \textit{University of California Santa Cruz} \\
+				  & Majors: MCD Biology, Cognitive Science \\
+		  		  & Minor: Bioinformatics \\
+				  & GPA: 3.90 \\
+\end{tabular}
+}
+
+\newcommand*{\Projects}{
+	\section{Selected Projects}
+	\begin{tabular}{rl}
+	Fun & Subreddit prediction of reddit comments \\
+		& Company-wide Elo rating system for foosball \\
+	School & Improve prediction of movie profits using subtitles\\
+           & Part-of-speech tagging with tensorflow \\
+	\end{tabular}
+}
+
+\newcommand*{\Tools}{
+	\section{Tools}
+	\begin{tabular}{rl}
+	Primary   & Python, bash/zsh, git, 
+			  \href{http://stevehanov.ca/blog/resume_comic.png}{\LaTeX} \\
+	Secondary & R, C, C++, Java \\
+	\end{tabular}
+}
+
+\newcommand*{\Work}{
+	\section{Work Experience}
+	\begin{tabular}{rl}
+	2013-2016 & \textbf{Bioinformatics Scientist}, 
+			    \textit{Dovetail Genomics} \\
+	   & \tabitem Created fast analysis pipelines for huge DNA sequence data \\
+	   & \tabitem Implemented a dynamic-programming optimization \\
+	   & \tabitem >10x sorting speedup by replacing quicksort with timsort \\
+	   & \tabitem Saved co-worker's brain-cycles with EC2 automation \\
+
+	\end{tabular}
+}
+
+\newcommand*{\Bonus}{
+	\section{Bonus Accomplishments}
+	\begin{tabular}{rl}
+	2017 & Nucleic acid sequence assembly.
+	\href{https://patents.google.com/patent/US9715573B2}
+	{US patent 9,715,573} \\
+	2016 & 
+	Journal article in Nature.
+	\href{https://www.ncbi.nlm.nih.gov/pubmed/27762356}
+	{doi: 10.1038/nature19840}. \\
+	2016 & 
+	Journal article in Genome Research.
+	\href{https://www.ncbi.nlm.nih.gov/pubmed/26848124}
+	{doi: 10.1101/gr.193474.115} \\
+	2015 & 
+	Journal article in Elife.
+	\href{https://www.ncbi.nlm.nih.gov/pubmed/25919952}
+	{doi: 10.7554/eLife.06416}
+	\end{tabular}
+}
+
+
 \begin{document}
 
-\begin{center}
-	\Huge Jonathan Stites \\
-	\small \phone | \email| \website | \github
-\end{center}
-
-
-\section{Education}
-\begin{tabular}{rl}
-May 2018  & \textbf{MSCS}, \textit{University of Texas at Austin} \\
-          & GPA: 3.58 \\
-	2013  & \textbf{BS}, \textit{University of California Santa Cruz} \\
-		  & Majors: MCD Biology, Cognitive Science \\
-		  & Minor: Bioinformatics \\
-		  & GPA: 3.90 \\
-\end{tabular}
-
-
-\section{Selected Projects}
-\begin{tabular}{rl}
-Class & Predict movie profits with subtitles, reviews, and other features \\
-          & Part-of-speech tagging with 
-          \href{https://www.tensorflow.org/}{tensorflow} \\
-Fun   & Subreddit comment classification \\
-		  & Office-wide Elo rating system for foosball \\
-\end{tabular}
-
-
-\section{Tools}
-\begin{tabular}{rl}
-Primary  & Python, bash/zsh, git, \LaTeX \\
-Secondary & R, C, C++, Java \\
-\end{tabular}
-
-
-\section{Work Experience}
-\begin{tabular}{rl}
-2013-2016 & \textbf{Bioinformatics Scientist} \textit{Dovetail Genomics, Santa Cruz, Ca} \\
-& Created data analysis pipelines for DNA sequencing data \\
-& Improved ability to scale using custom \\
-& Amazon EC2 and S3 pipelines \\
-\end{tabular}
-
-\section{Bonus Accomplishments}
-\begin{tabular}{rl}
-2017 & patent \\
-2016 & Nature paper \\
-2016 & Gen Research paper \\
-2015 & donna's thesis \\
-\end{tabular}
+\Contact
+\Education
+\Projects
+\Work
+\Tools
+\Bonus
 
 \end{document}

@@ -1,6 +1,6 @@
 before_install:
 - sudo apt-get update -qq
-- sudo apt-get install texlive-latex-recommended texlive-xetex tex-gyre texlive-latex-extra texlive-collection-fontsrecommended 
+- sudo apt-get install texlive-latex-recommended texlive-xetex tex-gyre texlive-latex-extra collection-fontsrecommended 
 
 script:
 - mkdir build

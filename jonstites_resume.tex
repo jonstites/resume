@@ -8,7 +8,7 @@
 \usepackage{titlesec}                                   %custom \section                                                                                                   
 
 \titleformat{\section}{\Large}{}{0em}{}
-	%[\titlerule]
+	[\titlerule]
 	
 % \titlespacing*{〈command〉}{〈left〉}{〈beforesep〉}{〈aftersep〉}[〈right〉
 \titlespacing{\section}{0pt}{10pt}{3pt}
@@ -28,7 +28,7 @@
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 \newcommand*{\email}{
-	\href{mailto:mail+resume@jonstites.com}{mail@jonstites.com}
+	\href{mailto:mail+resume@jonstites.com }{mail@jonstites.com}
 	}
 
 \newcommand*{\phone}{
@@ -58,8 +58,8 @@
 \newcommand*{\Contact}{
 	\begin{center}
 		\Huge Jonathan Stites \\
-		\small \email| \phone | \website \\
-	    \github
+	    \small \email \tabitem \phone \\
+	    \github \tabitem \website \\
 	\end{center}
 }
 

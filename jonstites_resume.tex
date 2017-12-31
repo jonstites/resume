@@ -1,6 +1,6 @@
 \documentclass[12pt]{extarticle}
 
-\usepackage{geometry}
+\usepackage[bmargin=1in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{tgpagella}
 
@@ -43,6 +43,20 @@
 	{\href{https://jonstites.com}{https://jonstites.com}}
 }
 
+\newcommand*{\charrnn}{
+	Character-by-character text generation using an RNN: \\
+	& {\href{https://github.com/jonstites/character_rnn}{https://github.com/jonstites/character \textunderscore rnn}}
+}
+
+\newcommand*{\convnet}{
+	Image classification using a convolutional neural network: \\
+	& {\href{https://github.com/jonstites/convnet}{https://github.com/jonstites/convnet}}
+}
+
+\newcommand*{\postagging}{
+	Part-of-speech tagging with an RNN (private repository).
+}
+
 \newcommand*{\xenopus}{
 	Session, Adam M., Yoshinobu Uno, Taejoon Kwon, et al. 
 	“Genome Evolution in the Allotetraploid Frog Xenopus Laevis.” 
@@ -68,7 +82,7 @@
 	\begin{tabular}{rl}
 		May 2018  & \textbf{Master of Science}, \textit{University of Texas at Austin} \\
 				  & Computer Science \\
-          		  & GPA: 3.58 \\
+          		  & GPA: 3.66 \\
 		2013 	  & \textbf{Bachelor of Science}, \textit{University of California Santa Cruz} \\
 				  & Majors: MCD Biology, Cognitive Science \\
 		  		  & Minor: Bioinformatics \\
@@ -79,10 +93,9 @@
 \newcommand*{\Projects}{
 	\section{Selected Projects}
 	\begin{tabular}{rl}
-	Fun & Subreddit prediction of reddit comments \\
-		& Company-wide Elo rating system for foosball \\
-	School & Improve prediction of movie profits using subtitles\\
-           & Part-of-speech tagging with tensorflow \\
+	Fun & \charrnn \\ \\
+		& \convnet \\ \\
+	School & \postagging \\
 	\end{tabular}
 }
 
@@ -91,7 +104,7 @@
 	\begin{tabular}{rl}
 	Primary   & Python, bash/zsh, git, 
 			  \href{http://stevehanov.ca/blog/resume_comic.png}{\LaTeX} \\
-	Secondary & R, C, C++, Java \\
+	Secondary & C++, R, C \\
 	\end{tabular}
 }
 
@@ -108,8 +121,8 @@
 	\end{tabular}
 }
 
-\newcommand*{\Bonus}{
-	\section{Bonus Accomplishments}
+\newcommand*{\Accomplishments}{
+	\section{Accomplishments}
 	\begin{tabular}{rl}
 	2017 & Nucleic acid sequence assembly.
 	\href{https://patents.google.com/patent/US9715573B2}
@@ -136,7 +149,7 @@
 \Education
 \Projects
 \Work
+\Accomplishments
 \Tools
-\Bonus
 
 \end{document}

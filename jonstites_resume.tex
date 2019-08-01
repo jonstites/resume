@@ -1,6 +1,6 @@
 \documentclass[12pt]{extarticle}
 
-\usepackage[bmargin=1in]{geometry}
+\usepackage[bmargin=.75in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{tgpagella}
 
@@ -53,9 +53,15 @@
 	& {\href{https://github.com/jonstites/convnet}{https://github.com/jonstites/convnet}}
 }
 
+\newcommand*{\minotaur}{
+	Absurdly fast maze generator with 6 possible algorithms in Rust: \\
+	& {\href{https://github.com/jonstites/minotaur}{https://github.com/jonstites/minotaur}}
+}
+
 \newcommand*{\postagging}{
 	Part-of-speech tagging with an RNN (private repository).
 }
+
 
 \newcommand*{\xenopus}{
 	Session, Adam M., Yoshinobu Uno, Taejoon Kwon, et al. 
@@ -82,19 +88,17 @@
 	\begin{tabular}{rl}
 		May 2018  & \textbf{Master of Science}, University of Texas at Austin \\
 				  & Computer Science \\
-          		  & GPA: 3.66 \\
 		2013 	  & \textbf{Bachelor of Science}, University of California Santa Cruz \\
 				  & Majors: MCD Biology, Cognitive Science \\
 		  		  & Minor: Bioinformatics \\
-				  & GPA: 3.90 \\
 \end{tabular}
 }
 
 \newcommand*{\Projects}{
 	\section{Selected Projects}
 	\begin{tabular}{rl}
-	Fun & \charrnn \\ \\
-		& \convnet \\ \\
+	Fun & \minotaur \\ \\
+	    & \charrnn \\ \\
 	School & \postagging \\
 	\end{tabular}
 }
@@ -102,19 +106,22 @@
 \newcommand*{\Tools}{
 	\section{Tools}
 	\begin{tabular}{rl}
-	Primary   & Python, bash/zsh, git, 
-			  \href{http://stevehanov.ca/blog/resume_comic.png}{\LaTeX} \\
-	Secondary & tensorflow, matplotlib, ggplot, R, C++, C \\
+	Languages   & Rust, Go, Python, Java, bash/zsh/fish, R \\
+	Tools & Google BigQuery, Google Dataflow, git, 
+			  \href{http://stevehanov.ca/blog/resume_comic.png}{\LaTeX} \\ \\
 	\end{tabular}
 }
 
 \newcommand*{\Work}{
 	\section{Work Experience}
 	\begin{tabular}{rl}
+	2018-Present & \textbf{Software Engineer}, The Home Depot \\
+	   & \tabitem Helped migrate 80+ job Hadoop process to Google Cloud \\
+	   & \tabitem Created an automated validation tool  \\
+	   & \tabitem Created an analytics dashboard for business users \\
 	2013-2016 & \textbf{Bioinformatics Scientist}, 
 			    Dovetail Genomics \\
-	   & \tabitem Created fast analysis pipelines for huge DNA sequence data \\
-	   & \tabitem Implemented a dynamic-programming optimization \\
+	   & \tabitem Created fast analysis pipelines for huge DNA sequence \\
 	   & \tabitem >10x sorting speedup by replacing quicksort with timsort \\
 	   & \tabitem Saved co-worker's brain-cycles with EC2 automation \\
 
@@ -146,9 +153,9 @@
 \begin{document}
 
 \Contact
+\Work
 \Education
 \Projects
-\Work
 \Accomplishments
 \Tools
 

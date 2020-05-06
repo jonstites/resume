@@ -1,6 +1,6 @@
 \documentclass[12pt]{extarticle}
 
-\usepackage[bmargin=.75in]{geometry}
+\usepackage[bmargin=0.75in, lmargin=1.00in, rmargin=1.00in, tmargin=0.75in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{tgpagella}
 
@@ -27,6 +27,9 @@
 
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
+\newcommand{\innertabitem}{~~\indent \llap{$\ast$}~~}
+
+
 \newcommand*{\email}{
 	\href{mailto:mail+resume@jonstites.com }{mail@jonstites.com}
 	}
@@ -45,7 +48,7 @@
 
 \newcommand*{\charrnn}{
 	Character-by-character text generation using an RNN: \\
-	& {\href{https://github.com/jonstites/character_rnn}{https://github.com/jonstites/character \textunderscore rnn}}
+	& {\href{https://github.com/jonstites/character_rnn}{https://github.com/jonstites/character\textunderscore rnn }}
 }
 
 \newcommand*{\convnet}{
@@ -54,9 +57,20 @@
 }
 
 \newcommand*{\minotaur}{
-	Absurdly fast maze generator with 6 possible algorithms in Rust: \\
+	Fast maze generator with 6 possible algorithms in Rust: \\
 	& {\href{https://github.com/jonstites/minotaur}{https://github.com/jonstites/minotaur}}
 }
+
+\newcommand*{\conway}{
+	Conway's Game of Life \\
+	& {\href{https://life.jonstites.com}{https://life.jonstites.com}}
+}
+
+\newcommand*{\lfs}{
+    Completed the Linux From Scratch project \\
+    & {\href{http://www.linuxfromscratch.org/cgi-bin/lfscounter.php}{http://www.linuxfromscratch.org/cgi-bin/lfscounter.php}}
+}
+
 
 \newcommand*{\postagging}{
 	Part-of-speech tagging with an RNN (private repository).
@@ -86,7 +100,7 @@
 \newcommand*{\Education}{
 	\section{Education}
 	\begin{tabular}{rl}
-		May 2018  & \textbf{Master of Science}, University of Texas at Austin \\
+		2018  & \textbf{Master of Science}, University of Texas at Austin \\
 				  & Computer Science \\
 		2013 	  & \textbf{Bachelor of Science}, University of California Santa Cruz \\
 				  & Majors: MCD Biology, Cognitive Science \\
@@ -97,9 +111,11 @@
 \newcommand*{\Projects}{
 	\section{Selected Projects}
 	\begin{tabular}{rl}
-	Fun & \minotaur \\ \\
-	    & \charrnn \\ \\
-	School & \postagging \\
+	Rust	& \conway \\
+			& \minotaur \\
+	Python	& \charrnn \\
+			& \convnet \\
+	Linux   & \lfs \\
 	\end{tabular}
 }
 
@@ -115,13 +131,24 @@
 \newcommand*{\Work}{
 	\section{Work Experience}
 	\begin{tabular}{rl}
-	2018-Present & \textbf{Software Engineer}, The Home Depot, Marketing Analytics \\
-	&    \tabitem Marketing matching rate from 88\% to 92\%; est. \$100,000s \\
-	&    \tabitem Helped migrate 80+ job Hadoop process to Google Cloud \\
-	&    \tabitem Automated validation; fewer errors and ~5hr/week saved \\
-	   
+	2018-Present & \textbf{Senior Software Engineer}, The Home Depot, Marketing Analytics \\
+	
+	&    \tabitem Automated validation, testing, deployment \\
+	
+
+	&    \tabitem Improved transaction matching rate 10\% to 93\% \\
+	
+	
+	&    \tabitem Created a new architecture for a system so complicated, \\
+	&    it had been originally built with 20+ people over more than 1 year \\
+	& 	  \innertabitem Removed huge amounts of accidental complexity \\
+		&     \innertabitem Reportedly much higher data quality, per business users \\
+	&     \innertabitem 3x speedup \\
+	&     \innertabitem 50\% data footprint \\
+
+	   	
 	2013-2016    &  \textbf{Bioinformatics Scientist}, Dovetail Genomics \\
-	&    \tabitem Created fast analysis pipelines for huge DNA sequence \\
+	&    \tabitem Created fast analysis pipelines for huge DNA sequences \\
 	&    \tabitem >10x sorting speedup by replacing quicksort with timsort \\
 	&    \tabitem Saved co-worker's brain-cycles with EC2 automation \\
 
@@ -157,6 +184,5 @@
 \Education
 \Projects
 \Accomplishments
-\Tools
 
 \end{document}
